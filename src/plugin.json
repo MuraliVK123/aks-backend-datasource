@@ -1,0 +1,37 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "datasource",
+  "name": "Optimax Streaming Datasource",
+  "id": "aks-backend-datasource",
+  "metrics": true,
+  "backend": true,
+  "alerting": true,
+  "executable": "gpx_backend_datasource",
+  "info": {
+    "description": "Datasource to support alerts",
+    "author": {
+      "name": "Aks"
+    },
+    "keywords": ["datasource"],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"l
+  },
+  "dependencies": {
+    "grafanaDependency": "^9.3.8",
+    "plugins": []
+  },
+
+  "module":{
+    "backend":{
+      "datasource":{
+        "yourConfigCtrl": "./pkg/datasource"
+      }
+    }
+  }
+}
